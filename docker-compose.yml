@@ -1,0 +1,14 @@
+services:
+  postgres:
+    container_name: postgres-chat-app
+    image: postgres:latest
+    ports:
+      - "5435:5432"
+    environment:
+      POSTGRES_DB: chat_app
+      POSTGRES_USER: sergiu
+      POSTGRES_PASSWORD: root
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+volumes:
+  postgres-data:
